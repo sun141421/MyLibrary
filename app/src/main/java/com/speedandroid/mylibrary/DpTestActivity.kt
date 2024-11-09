@@ -8,8 +8,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updateLayoutParams
 import androidx.databinding.DataBindingUtil
+import com.bumptech.glide.Glide
 import com.speedandroid.mylibrary.databinding.ActivityDpTestBinding
+import com.speedandroid.speedcodelibrary.ext.BackgroundTarget
+import com.speedandroid.speedcodelibrary.ext.CompoundDrawableTarget
 import com.speedandroid.speedcodelibrary.ext.dp
+import com.speedandroid.speedcodelibrary.ext.into
+import com.speedandroid.speedcodelibrary.ext.intoBg
 import com.speedandroid.speedcodelibrary.ext.sp
 
 class DpTestActivity : AppCompatActivity() {
@@ -34,5 +39,8 @@ class DpTestActivity : AppCompatActivity() {
             height = 50.dp
             width = 120.dp
         }
+        Glide.with(this).load("https://placehold.jp/350x350.png").into(viewBinding.tvTest,CompoundDrawableTarget.LEFT,12.dp,12.dp)
+
+        Glide.with(this).load("https://placehold.jp/350x150.png").fitCenter().intoBg(viewBinding.flTest)
     }
 }

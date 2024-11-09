@@ -25,5 +25,11 @@
         android:background="#0f0"
         android:text="120dp*50dp" />
 
+    <FrameLayout
+        android:id="@+id/fl_test"
+        android:background="#0f0"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
 
 </LinearLayout>
