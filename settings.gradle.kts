@@ -32,3 +32,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "MyLibrary"
 include(":app")
+include(":speedCodeLibrary")
