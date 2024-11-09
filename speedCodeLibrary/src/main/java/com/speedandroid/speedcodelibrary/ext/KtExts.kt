@@ -11,23 +11,20 @@ import kotlin.math.ceil
 
 fun Context.layoutInflater() = LayoutInflater.from(this)
 
-/**
- * dp转px
- * @param context 不传使用默认,用于有设置过固定分辨率等等的情况
- * */
-fun Int.dp(context: Context? = null): Int {
-    val resource = context?.resources ?: Resources.getSystem()
-    return ceil(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this.toFloat(), resource.displayMetrics)).toInt()
-}
+/** * dp转px * */
+val Int.dp: Int
+    get() {
+        val displayMetrics = Resources.getSystem().displayMetrics
+        return ceil(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this.toFloat(), displayMetrics)).toInt()
+    }
 
-/**
- * sp转px
- * @param context 不传使用默认,用于有设置过固定分辨率等等的情况
- * */
-fun Int.sp(context: Context? = null): Int {
-    val resource = context?.resources ?: Resources.getSystem()
-    return ceil(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, this.toFloat(), resource.displayMetrics)).toInt()
-}
+/**sp转px*/
+val Int.sp: Int
+    get() {
+        val displayMetrics = Resources.getSystem().displayMetrics
+        return ceil(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, this.toFloat(), displayMetrics)).toInt()
+    }
+
 
 fun <T> MutableLiveData<T>.asLiveData() = this as LiveData<T>
 
