@@ -36,5 +36,6 @@ dependencies {
     implementation(libs.material)
 
     api(libs.glide)
-//    api(libs.glide.compiler)
+    api(libs.gson)
+
 }
