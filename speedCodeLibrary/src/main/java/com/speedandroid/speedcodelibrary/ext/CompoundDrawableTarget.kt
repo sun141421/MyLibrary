@@ -5,6 +5,8 @@ import android.widget.TextView
 import com.bumptech.glide.RequestBuilder
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
+import com.speedandroid.speedcodelibrary.ext.CompoundDrawableTarget.Companion.LEFT
+import com.speedandroid.speedcodelibrary.ext.CompoundDrawableTarget.Companion.TOP
 
 /**
  * 加载 CompoundDrawable
@@ -34,6 +36,10 @@ class CompoundDrawableTarget(private val view: TextView, private val position: I
     }
 }
 
+/**
+ * 加载 CompoundDrawable
+ * @param position 取值[LEFT],[TOP]等
+ * */
 fun RequestBuilder<Drawable>.into(view: TextView, position: Int, width: Int, height: Int) {
     this.into(CompoundDrawableTarget(view, position, width, height))
 }

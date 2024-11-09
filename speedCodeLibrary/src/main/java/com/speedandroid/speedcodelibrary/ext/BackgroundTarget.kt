@@ -21,6 +21,7 @@ class BackgroundTarget(view: View) : CustomViewTarget<View, Drawable>(view) {
     }
 }
 
+/**加载背景*/
 fun  RequestBuilder<Drawable>.intoBg(view: View){
     this.into(BackgroundTarget(view))
 }
