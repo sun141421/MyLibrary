@@ -1,6 +1,7 @@
 package com.speedandroid.mylibrary
 
 import android.os.Bundle
+import android.util.TypedValue
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -9,6 +10,7 @@ import androidx.core.view.updateLayoutParams
 import androidx.databinding.DataBindingUtil
 import com.speedandroid.mylibrary.databinding.ActivityDpTestBinding
 import com.speedandroid.speedcodelibrary.ext.dp
+import com.speedandroid.speedcodelibrary.ext.sp
 
 class DpTestActivity : AppCompatActivity() {
     private val viewBinding by lazy { ActivityDpTestBinding.bind(findViewById(R.id.main)) }
@@ -26,6 +28,8 @@ class DpTestActivity : AppCompatActivity() {
     }
 
     private fun doTest() {
+        viewBinding.tvTest.setTextSize(TypedValue.COMPLEX_UNIT_PX, 18.sp.toFloat())
+
         viewBinding.tvTest.updateLayoutParams {
             height = 50.dp
             width = 120.dp

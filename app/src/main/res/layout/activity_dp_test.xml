@@ -15,6 +15,7 @@
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:background="#0f0"
+        android:textSize="18sp"
         android:text="120dp*50dp" />
 
     <TextView
@@ -22,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#0f0"
-        android:text="code:120dp*50dp" />
+        android:text="120dp*50dp" />
 
 
 </LinearLayout>
