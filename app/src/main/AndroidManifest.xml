@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MyLibrary"
         tools:targetApi="31">
         <activity
+            android:name=".DataBindingTestActivity"
+            android:exported="false" />
+        <activity
             android:name=".DpTestActivity"
             android:exported="false" />
         <activity

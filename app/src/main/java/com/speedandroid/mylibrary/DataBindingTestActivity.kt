@@ -1,18 +1,24 @@
 package com.speedandroid.mylibrary
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.databinding.DataBindingUtil
+import com.speedandroid.mylibrary.databinding.ActivityDataBindingTestBinding
 
-class MainActivity : AppCompatActivity() {
+class DataBindingTestActivity : AppCompatActivity() {
+
+    private val vm by viewModels<DataBindingViewModel>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        val databind = DataBindingUtil.setContentView<ActivityDataBindingTestBinding>(this, R.layout.activity_data_binding_test)
+        databind.vm = vm
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -20,11 +26,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun doDpTest(v: View){
-        startActivity(Intent(this,DpTestActivity::class.java))
-    }
 
-    fun doBindingTest(v:View){
-        startActivity(Intent(this,DataBindingTestActivity::class.java))
-    }
 }
