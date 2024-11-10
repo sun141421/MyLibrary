@@ -37,5 +37,6 @@ dependencies {
 
     api(libs.glide)
     api(libs.gson)
+    implementation(libs.androidx.databinding.common)
 
 }
