@@ -4,7 +4,6 @@ import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ItemDecoration
-import com.sbds.library.gm.ext.dp
 
 /**简单的ItemDecoration*/
 class SimpleItemDecoration(
