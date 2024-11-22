@@ -7,10 +7,10 @@ import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 
 /**简单的ItemDecoration*/
 class SimpleItemDecoration(
-    private val leftInDp: Int,
-    private val topInDp: Int,
-    private val rightInDp: Int,
-    private val bottomInDp: Int
+    private val leftInDp: Int = 0,
+    private val topInDp: Int = 0,
+    private val rightInDp: Int = 0,
+    private val bottomInDp: Int = 0
 ) : ItemDecoration() {
 
     constructor(verticalInDp: Int, horizontalInDp: Int) : this(horizontalInDp, verticalInDp, horizontalInDp, verticalInDp)
