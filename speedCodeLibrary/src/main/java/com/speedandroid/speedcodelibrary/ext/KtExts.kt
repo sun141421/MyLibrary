@@ -6,9 +6,12 @@ import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.OnClickListener
+import android.widget.ImageView
 import androidx.core.view.postDelayed
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import kotlin.math.ceil
 
 
@@ -52,4 +55,12 @@ fun View.onDebounceClick(onClickListener: OnClickListener) {
         postDelayed(300) { this.isClickable = true }
         onClickListener.onClick(this)
     }
+}
+
+/**加载图片*/
+fun ImageView.loadImage(imgUrl: String, placeholder: Int?, errorImg: Int?) {
+    val options = RequestOptions()
+    placeholder?.let { options.placeholder(placeholder) }
+    errorImg?.let { options.error(errorImg) }
+    Glide.with(this).load(imgUrl).apply(options).into(this)
 }

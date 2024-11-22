@@ -6,8 +6,6 @@ import android.widget.ImageView
 import androidx.core.view.isGone
 import androidx.core.view.isInvisible
 import androidx.databinding.BindingAdapter
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 
 @BindingAdapter("goneWhenEmpty")
 fun bindingGoneWhenEmpty(view: View, list: List<Any>?) {
@@ -36,10 +34,7 @@ fun bindingOnDebounceClick(view: View, clickListener: OnClickListener) {
 
 @BindingAdapter(value = ["imgUrl", "placeholder", "errorImg"], requireAll = false)
 fun bindingImgUrl(imageView: ImageView, imgUrl: String, placeholder: Int?, errorImg: Int?) {
-    val options = RequestOptions()
-    placeholder?.let { options.placeholder(placeholder) }
-    errorImg?.let { options.error(errorImg) }
-    Glide.with(imageView).load(imgUrl).apply(options).into(imageView)
+    imageView.loadImage(imgUrl, placeholder, errorImg)
 }
 
 
