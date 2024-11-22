@@ -1,12 +1,12 @@
-package com.speedandroid.speedcodelibrary.ext
+package com.speedandroid.speedcodelibrary.glidetarget
 
 import android.graphics.drawable.Drawable
 import android.widget.TextView
 import com.bumptech.glide.RequestBuilder
 import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.transition.Transition
-import com.speedandroid.speedcodelibrary.ext.CompoundDrawableTarget.Companion.LEFT
-import com.speedandroid.speedcodelibrary.ext.CompoundDrawableTarget.Companion.TOP
+import com.speedandroid.speedcodelibrary.glidetarget.CompoundDrawableTarget.Companion.LEFT
+import com.speedandroid.speedcodelibrary.glidetarget.CompoundDrawableTarget.Companion.TOP
 
 /**
  * 加载 CompoundDrawable

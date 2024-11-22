@@ -12,11 +12,11 @@ import androidx.core.view.updateLayoutParams
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import com.speedandroid.mylibrary.databinding.ActivityDpTestBinding
-import com.speedandroid.speedcodelibrary.ext.CompoundDrawableTarget
 import com.speedandroid.speedcodelibrary.ext.dp
-import com.speedandroid.speedcodelibrary.ext.into
-import com.speedandroid.speedcodelibrary.ext.intoBg
 import com.speedandroid.speedcodelibrary.ext.sp
+import com.speedandroid.speedcodelibrary.glidetarget.CompoundDrawableTarget
+import com.speedandroid.speedcodelibrary.glidetarget.into
+import com.speedandroid.speedcodelibrary.glidetarget.intoBg
 
 class DpTestActivity : AppCompatActivity() {
     private val viewBinding by lazy { ActivityDpTestBinding.bind(findViewById(R.id.main)) }

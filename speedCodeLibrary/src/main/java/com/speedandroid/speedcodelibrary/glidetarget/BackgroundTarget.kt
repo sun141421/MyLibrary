@@ -1,4 +1,4 @@
-package com.speedandroid.speedcodelibrary.ext
+package com.speedandroid.speedcodelibrary.glidetarget
 
 import android.graphics.drawable.Drawable
 import android.view.View
