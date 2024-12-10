@@ -1,6 +1,8 @@
 package com.speedandroid.speedcodelibrary.ext
 
+import android.app.Activity
 import android.content.Context
+import android.content.ContextWrapper
 import android.content.res.Resources
 import android.util.TypedValue
 import android.view.LayoutInflater
@@ -63,4 +65,19 @@ fun ImageView.loadImage(imgUrl: String, placeholder: Int?, errorImg: Int?) {
     placeholder?.let { options.placeholder(placeholder) }
     errorImg?.let { options.error(errorImg) }
     Glide.with(this).load(imgUrl).apply(options).into(this)
+}
+
+fun Context.asActivity(): Activity? {
+    if (this is Activity) {
+        return this
+    }
+
+    var baseContext = this
+    while (baseContext is ContextWrapper) {
+        baseContext = baseContext.baseContext
+        if (baseContext is Activity) {
+            return baseContext
+        }
+    }
+    return null
 }
