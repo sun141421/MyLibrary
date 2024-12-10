@@ -17,12 +17,12 @@ fun bindingGoneWhenEmpty(view: View, text: CharSequence?) {
     view.isGone = text.isNullOrEmpty()
 }
 
-@BindingAdapter("goneWhenEmpty")
+@BindingAdapter("invisibleWhenEmpty")
 fun bindingInvisibleWhenEmpty(view: View, list: List<Any>?) {
     view.isInvisible = list.isNullOrEmpty()
 }
 
-@BindingAdapter("goneWhenEmpty")
+@BindingAdapter("invisibleWhenEmpty")
 fun bindingInvisibleWhenEmpty(view: View, text: CharSequence?) {
     view.isInvisible = text.isNullOrEmpty()
 }
