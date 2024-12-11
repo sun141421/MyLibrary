@@ -51,10 +51,10 @@ fun <T> MutableLiveData<T>.asLiveData() = this as LiveData<T>
 /**
  * 防抖点击
  * */
-fun View.onDebounceClick(onClickListener: OnClickListener) {
+fun View.onDebounceClick(disableTime: Long = 300L,onClickListener: OnClickListener) {
     this.setOnClickListener {
         this.isClickable = false
-        postDelayed(300) { this.isClickable = true }
+        postDelayed(disableTime) { this.isClickable = true }
         onClickListener.onClick(this)
     }
 }
