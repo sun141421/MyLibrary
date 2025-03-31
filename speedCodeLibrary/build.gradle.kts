@@ -39,4 +39,9 @@ dependencies {
     api(libs.gson)
     api(libs.androidx.databinding.common)
 
+    api(libs.bundles.retrofit)
+
+    api(libs.bundles.coroutines)
+    api(libs.bundles.ktxs)
+
 }

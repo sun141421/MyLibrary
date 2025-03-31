@@ -29,7 +29,7 @@ fun bindingInvisibleWhenEmpty(view: View, text: CharSequence?) {
 
 @BindingAdapter("onDebounceClick")
 fun bindingOnDebounceClick(view: View, clickListener: OnClickListener) {
-    view.onDebounceClick(clickListener)
+    view.onDebounceClick(onClickListener = clickListener)
 }
 
 @BindingAdapter(value = ["imgUrl", "placeholder", "errorImg"], requireAll = false)

@@ -6,23 +6,23 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".NetWorkTestActivity">
 
 
     <Button
         android:layout_width="match_parent"
-        android:text="dp test"
-        android:onClick="doDpTest"
+        android:text="doTestGet"
+        android:onClick="doTestGet"
         android:layout_height="wrap_content"/>
     <Button
         android:layout_width="match_parent"
-        android:text="Binding test"
-        android:onClick="doBindingTest"
+        android:text="doTestPost"
+        android:onClick="doTestPost"
         android:layout_height="wrap_content"/>
-    <Button
+
+    <TextView
+        android:id="@+id/tv"
         android:layout_width="match_parent"
-        android:text="Network test"
-        android:onClick="doNetworkTest"
         android:layout_height="wrap_content"/>
 
 </LinearLayout>

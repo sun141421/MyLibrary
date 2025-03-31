@@ -19,6 +19,9 @@
             android:name=".DpTestActivity"
             android:exported="false" />
         <activity
+            android:name=".NetWorkTestActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
