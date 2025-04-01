@@ -33,4 +33,17 @@ class NetWorkTestViewModel : ViewModel() {
             _state2Flow.value = response.data.datas
         }
     }
+
+    fun getMultiContent(){
+        viewModelScope.launch {
+            try {
+                val response = apiService.getBannerContent2()
+                Log.e("test", "response: $response")
+                _stateFlow.value = response.data
+            }catch (e:Exception){
+                Log.e("test", "error: ${e.message}")
+            }
+
+        }
+    }
 }

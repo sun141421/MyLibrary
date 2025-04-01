@@ -19,6 +19,11 @@
         android:text="doTestPost"
         android:onClick="doTestPost"
         android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="match_parent"
+        android:text="doTestMulti"
+        android:onClick="doTestMulti"
+        android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/tv"

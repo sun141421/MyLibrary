@@ -46,5 +46,10 @@ class NetWorkTestActivity : AppCompatActivity() {
         vm.postSearch("android")
     }
 
+    fun doTestMulti(view: View) {
+        vm.getMultiContent()
+
+    }
+
 
 }

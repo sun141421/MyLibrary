@@ -1,6 +1,7 @@
 package com.speedandroid.mylibrary.http
 
 import com.speedandroid.speedcodelibrary.network.CommonParamsInterceptor
+import com.speedandroid.speedcodelibrary.network.MultiHostInterceptor
 import com.speedandroid.speedcodelibrary.network.RetrofitClient
 import retrofit2.Retrofit
 
@@ -16,7 +17,7 @@ object AppRetrofitClient {
             "uid" to "uid_1234",
         )
         val commonInterceptor = CommonParamsInterceptor(commonParams, commonHeaders)
-        return RetrofitClient.newClient(ApiUrls.BASE_URL, listOf(commonInterceptor))
+        return RetrofitClient.newClient(ApiUrls.BASE_URL, listOf(commonInterceptor, MultiHostInterceptor()))
     }
 
     private val retrofit: Retrofit by lazy { newInstance() }
