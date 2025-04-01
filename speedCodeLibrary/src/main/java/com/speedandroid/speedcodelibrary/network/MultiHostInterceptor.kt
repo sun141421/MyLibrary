@@ -5,7 +5,7 @@ import okhttp3.Response
 
 /**
  * 多个host的拦截器
- *
+ * 添加header,然后替换host完成切换
  * */
 class MultiHostInterceptor : Interceptor {
     companion object {
