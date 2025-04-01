@@ -30,6 +30,12 @@ class NetWorkTestActivity : AppCompatActivity() {
                 findViewById<TextView>(R.id.tv).text = it.joinToString ("\n\n")
             }
         }
+
+        lifecycleScope.launch {
+            vm.state2Flow.flowWithLifecycle(lifecycle).collect{
+                findViewById<TextView>(R.id.tv).text = it.joinToString("\n\n")
+            }
+        }
     }
 
     fun doTestGet(view: View) {
@@ -37,7 +43,7 @@ class NetWorkTestActivity : AppCompatActivity() {
     }
 
     fun doTestPost(view: View) {
-
+        vm.postSearch("android")
     }
 
 
