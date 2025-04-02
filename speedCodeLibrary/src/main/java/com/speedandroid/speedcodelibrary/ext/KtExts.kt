@@ -11,6 +11,7 @@ import android.view.View.OnClickListener
 import android.widget.ImageView
 import androidx.core.view.postDelayed
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -51,7 +52,7 @@ fun <T> MutableLiveData<T>.asLiveData() = this as LiveData<T>
 /**
  * 防抖点击
  * */
-fun View.onDebounceClick(disableTime: Long = 300L,onClickListener: OnClickListener) {
+fun View.onDebounceClick(disableTime: Long = 300L, onClickListener: OnClickListener) {
     this.setOnClickListener {
         this.isClickable = false
         postDelayed(disableTime) { this.isClickable = true }
@@ -81,3 +82,21 @@ fun Context.asActivity(): Activity? {
     }
     return null
 }
+
+fun <R, T1, T2> LiveData<T1>.zip(lD2: LiveData<T2>, block: (T1?, T2?) -> R): MediatorLiveData<R> {
+    return LiveDatas.zip(this, lD2, block)
+}
+
+fun <R, T1, T2, T3> LiveData<T1>.zip(lD2: LiveData<T2>, lD3: LiveData<T3>, block: (T1?, T2?, T3?) -> R): MediatorLiveData<R> {
+    return LiveDatas.zip(this, lD2, lD3, block)
+}
+
+fun <R, T1, T2, T3, T4> LiveData<T1>.zip(
+    lD2: LiveData<T2>,
+    lD3: LiveData<T3>,
+    lD4: LiveData<T4>,
+    block: (T1?, T2?, T3?, T4?) -> R
+): MediatorLiveData<R> {
+    return LiveDatas.zip(this, lD2, lD3, lD4, block)
+}
+
