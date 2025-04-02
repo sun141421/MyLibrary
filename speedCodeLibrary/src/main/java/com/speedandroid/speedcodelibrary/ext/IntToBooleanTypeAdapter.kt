@@ -7,6 +7,11 @@ import com.google.gson.stream.JsonWriter
 /**
  * Int 转 boolean 的Gson JsonAdapter
  * Int 1 为 true, 0 为 false
+ *
+ * 使用方法
+ *
+ *     @JsonAdapter(IntToBooleanTypeAdapter::class)
+ *     val isFree:Boolean,
  * */
 class IntToBooleanTypeAdapter : TypeAdapter<Boolean>() {
     companion object {
