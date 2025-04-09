@@ -26,6 +26,13 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+
+    buildFeatures {
+        viewBinding = true
+        //noinspection DataBindingWithoutKapt
+        dataBinding = true
+    }
 }
 
 dependencies {

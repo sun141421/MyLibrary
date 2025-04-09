@@ -3,19 +3,34 @@
 
 
     <declare-styleable name="CenterDrawableTextView">
-        <attr name="leftDrawable" format="reference|color"/>
-        <attr name="rightDrawable" format="reference|color"/>
-        <attr name="topDrawable" format="reference|color"/>
-        <attr name="bottomDrawable" format="reference|color"/>
+        <attr name="leftDrawable" format="reference|color" />
+        <attr name="rightDrawable" format="reference|color" />
+        <attr name="topDrawable" format="reference|color" />
+        <attr name="bottomDrawable" format="reference|color" />
 
-        <attr name="leftDrawableWidth" format="reference|dimension"/>
-        <attr name="rightDrawableWidth" format="reference|dimension"/>
-        <attr name="topDrawableWidth" format="reference|dimension"/>
-        <attr name="bottomDrawableWidth" format="reference|dimension"/>
+        <attr name="leftDrawableWidth" format="reference|dimension" />
+        <attr name="rightDrawableWidth" format="reference|dimension" />
+        <attr name="topDrawableWidth" format="reference|dimension" />
+        <attr name="bottomDrawableWidth" format="reference|dimension" />
 
-        <attr name="leftDrawableHeight" format="reference|dimension"/>
-        <attr name="rightDrawableHeight" format="reference|dimension"/>
-        <attr name="topDrawableHeight" format="reference|dimension"/>
-        <attr name="bottomDrawableHeight" format="reference|dimension"/>
+        <attr name="leftDrawableHeight" format="reference|dimension" />
+        <attr name="rightDrawableHeight" format="reference|dimension" />
+        <attr name="topDrawableHeight" format="reference|dimension" />
+        <attr name="bottomDrawableHeight" format="reference|dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TitleBarView">
+        <!--标题-->
+        <attr name="tbv_Title" format="reference|string" />
+        <!--标题字体大小-->
+        <attr name="tbv_TextSize" format="reference|dimension" />
+        <!--标题字体颜色-->
+        <attr name="tbv_TextColor" format="reference|color" />
+        <!--左边按钮图标-->
+        <attr name="tbv_LeftIcon" format="reference" />
+        <!--左边按钮图标-->
+        <attr name="tbv_HiddeLeftIcon" format="reference|boolean" />
+        <!--右边按钮图标-->
+        <attr name="tbv_RightIcon" format="reference" />
     </declare-styleable>
 </resources>
